@@ -6,3 +6,49 @@
   text-align: center;
   font-family: serif;
 }
+
+#map {
+  height: 400px;
+  width: 100%;
+}
+
+.address {
+  font-size: 20px;
+  text-align: center;
+   p {
+   margin-bottom: 0.8rem;
+  }
+}
+
+.section-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.where {
+  background-color: #df3e01;
+  font-family: chunkfive;
+  font-size: 20px;
+  color: #f2f0ef;
+}
+
+.info {
+  background-color: #DCDF01;
+  font-family: chunkfive;
+  font-size: 24px;
+  color: #036FCE;
+}
+
+.line-up {
+  background-color: #00a651;
+  font-family: Chunkfive;
+  font-size: 24px;
+  color: #DCDF01;
+}
+
+.join-us {
+  background-color: #036FCE;
+  font-family: Chunkfive;
+  font-size: 26px;
+  color: #f2f0ef;
+}
