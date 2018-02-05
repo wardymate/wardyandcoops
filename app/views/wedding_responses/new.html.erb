@@ -1,0 +1,76 @@
+<div class="container rsvp-form">
+  <div class="row">
+    <div class="col-m mx-auto">
+      <img src="/images/RSVP--ban-WC.gif">
+    </div>
+    <div class="col-md-8 mx-auto mt-2">
+      <%= form_for @wedding_response, url: {action: "create"} do |f| %>
+
+        <div class="form-group row mb-4">
+          <%= f.label :names, class: "col-sm-4 col-form-label" %>
+          <div class="col-sm-8">
+           <%= f.text_field :names, class: "form-control", placeholder: "Your names", required: true %>
+          </div>
+        </div>
+
+        <div class="coming">
+          <div class="form-group row mb-4">
+            <legend class="col-form-label col-sm-4 pt-0">Can You Come?</legend>
+            <div class="col-sm-8">
+              <div class="form-check">
+                <%= f.radio_button :coming, "Yes", class: "form-check-input" %> 
+                <%= f.label :coming, "Yes! Super excited and can not wait to be there!", class: "form-check-label" %>
+              </div>
+              <div class="form-check">
+                <%= f.radio_button :coming, "No", class: "form-check-input" %> 
+                <%= f.label :coming, "No, Sadly will not be able to join the celebrations.", class: "form-check-label" %>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- start of hidden inputs -->
+        <div class="staying-details">
+          <div class="form-group row mb-4">
+            <%= f.label :dietry_requirements, class: "col-sm-4 col-form-label" %>
+            <div class="col-sm-8">
+              <%= f.text_field :dietry_requirements, class: "form-control" %>
+            </div>
+          </div>
+
+          <div class="form-group row mb-4">
+            <%= f.label :accomodation, "Where will you stay on Saturday night?", class: "col-sm-4 col-form-label" %>
+            <div class="col-sm-8">
+              <%= f.select :accomodation, options_for_select(WeddingResponse::ACCOMODATION_OPTIONS), {}, class: "form-control" %>
+            </div>
+          </div>
+
+          <div class="form-group row mb-4">
+            <div class="col-sm-4">Friday Night?</div>
+            <div class="col-sm-8">
+              <div class="form-check">
+                <%= f.check_box :friday_night, class: "form-check-input" %>
+                <%= f.label :friday_night, "We would like to camp under the Stars on Friday Night as well!", class: "form-check-label" %>
+              </div>
+            </div>
+          </div>
+
+          <div class="form-group row mb-4">
+            <div class="col-sm-4">Sunday Morning?</div>
+            <div class="col-sm-8">
+              <div class="form-check">
+                <%= f.check_box :breakfast, class: "form-check-input" %>
+                <%= f.label :breakfast, "We will be joing you for breakfast and some fun and games on Sunday Morning", class: "form-check-label" %>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- End of hidden inputs -->
+
+        <div class="form-group row mb-4">
+          <%= f.submit "Submit", class: "btn btn-info btn-block" %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>

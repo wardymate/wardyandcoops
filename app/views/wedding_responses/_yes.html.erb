@@ -1,0 +1,37 @@
+<div class="container rsvp-form">
+  <div class="col-m mx-auto">
+    <img src="/images/thankyou--ban-WC.gif">
+  </div>
+  <p>
+  <%= @wedding_response.names %> We are looking forward to seeing you at our wedding.
+  </p>
+
+  <p>We have your following dietary requirements</p>
+  <p>
+    <%= @wedding_response.dietry_requirements %>
+  </p>
+
+  <% if @wedding_response.friday_night %>
+    <p> We are looking forward to<Down> having you at our bring your own BBQ and having a few quiet drinks on the Friday nigth. We will have the grills hot from 7pm!</p>
+  <% end %>
+
+  <% if @wedding_response.camping? %>
+    <p>Remember to pack your tent</p>
+  <% end %>
+
+  <% if @wedding_response.campervan? %>
+    <p>There will be space marked out for parking your campervan</p>
+  <% end %>
+
+  <% if @wedding_response.bell_tent? %>
+    <p>Remember to book your bell tent with</p>
+  <% end %>
+
+  <% if @wedding_response.hotel? %>
+    <p>There is a list of Hotel's and B and B's on the <%= link_to("Home Page", "/#accomodation", {}) %> along with the numbers for some local taxi companies</p>
+  <% end %>
+
+  <% if @wedding_response.breakfast %>
+    <p>We will be firing up the BBQ again for some tea and breakfast at 10am. Remember to pack your swimming costume!</p>
+  <% end %>
+</div>
