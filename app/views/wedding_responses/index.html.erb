@@ -1,0 +1,32 @@
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Names</th>
+      <th scope="col">Coming</th>
+      <th scope="col">Dietrary Requirements</th>
+      <th scope="col">Friday Night</th>
+      <th scope="col">Accomodation</th>
+      <th scope="col">Sunday Morning</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @wedding_responses.each do |wedding_response| %>
+      <tr>
+        <th scope="row"><%= wedding_response.names %></th>
+        <td><%= human_boolean wedding_response.coming %></td>
+        <% if wedding_response.coming %>
+          <td><%= wedding_response.dietry_requirements %></td>
+          <td><%= human_boolean wedding_response.friday_night %></td>
+          <td><%= wedding_response.accomodation %></td>
+          <td><%= human_boolean wedding_response.breakfast %></td>
+        <% else %>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        <% end %>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+

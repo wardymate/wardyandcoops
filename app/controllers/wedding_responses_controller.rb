@@ -1,4 +1,10 @@
 class WeddingResponsesController < ApplicationController
+
+  def index
+    redirect_to root_path unless user_signed_in?
+    @wedding_responses = WeddingResponse.all
+  end
+
   def new
     @wedding_response = WeddingResponse.new
   end
