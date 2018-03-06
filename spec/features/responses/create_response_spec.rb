@@ -11,7 +11,7 @@ feature 'Responses' do
   #   Then I see "Welcome"
   scenario 'Accept' do
     visit root_path
-    click_link "Join Us", match: :first
+    click_link "RSVP", match: :first
     fill_in "Names", with: "test users"
     choose(id: "wedding_response_coming_yes")
     fill_in "Dietry requirements", with: "none"

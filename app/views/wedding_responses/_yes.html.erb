@@ -1,37 +1,44 @@
 <div class="container rsvp-form">
-  <div class="col-m mx-auto">
+  <div class="col-m mx-auto mb-4">
     <img src="/images/thankyou--ban-WC.gif">
   </div>
   <p>
-  <%= @wedding_response.names %> We are looking forward to seeing you at our wedding.
+    <%= @wedding_response.names %>, we are deligthed that you can can make it and are looking forward to you joining us to celebrate our big day!
   </p>
+  <br>
 
-  <p>We have your following dietary requirements</p>
-  <p>
-    <%= @wedding_response.dietry_requirements %>
-  </p>
-
-  <% if @wedding_response.friday_night %>
-    <p> We are looking forward to<Down> having you at our bring your own BBQ and having a few quiet drinks on the Friday nigth. We will have the grills hot from 7pm!</p>
+  <% if @wedding_response.dietry_requirements %>
+    <p>Thank you for letting us know about the following dietary requirements. We will make sure you do not go hungry!</p>
+    <p><%= @wedding_response.dietry_requirements %></p>
   <% end %>
 
+  <br>
+  <% if @wedding_response.friday_night %>
+    <p> We are looking forward to seeing you for few QUIET drinks on the Friday night. We will have the grills hot from 7pm so bring something to throw on the grill and something to wash it down with.</p>
+  <% end %>
+  <br>
+
   <% if @wedding_response.camping? %>
-    <p>Remember to pack your tent</p>
+    <p>Remember to pack your tent - we may even help you with trying to pitch it.</p>
   <% end %>
 
   <% if @wedding_response.campervan? %>
-    <p>There will be space marked out for parking your campervan</p>
+    <p>We will make sure there is a space marked out for your campervan.</p>
   <% end %>
 
   <% if @wedding_response.bell_tent? %>
-    <p>Remember to book your bell tent with</p>
+    <p>We will put you in touch with the bell tent company so that you can organize having a luxury tent pre-erected for you.</p>
   <% end %>
 
   <% if @wedding_response.hotel? %>
-    <p>There is a list of Hotel's and B and B's on the <%= link_to("Home Page", "/#accomodation", {}) %> along with the numbers for some local taxi companies</p>
+    <p>There is a list of Hotel's and B&B's on the <%= link_to("Home Page", "/home#accomodation", {}) %> along with the numbers for some local taxi companies.</p>
   <% end %>
+  <br>
 
   <% if @wedding_response.breakfast %>
-    <p>We will be firing up the BBQ again for some tea and breakfast at 10am. Remember to pack your swimming costume!</p>
+    <p>We will be firing up the BBQ for some breakfast at 10am. We are next to a river so remember to pack your swimming costume!</p>
   <% end %>
+  <br>
+
+  <P>Do not to forget to bring a bottle of something for the after party!!</p>
 </div>

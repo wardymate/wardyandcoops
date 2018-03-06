@@ -7,13 +7,21 @@
   font-family: BadScript;
 }
 
+.camping {
+  list-style: inside circle;
+}
+
+.hotels {
+  list-style: none;
+}
+
 #map {
   height: 400px;
   width: 100%;
 }
 
 .address {
-  font-size: 20px;
+  font-size: 22px;
   text-align: center;
   font-family: BadScript;
 
@@ -28,29 +36,55 @@
 }
 
 .where {
-  background-color: #df3e01;
   font-family: BadScript;
-  font-size: 20px;
-  color: #f2f0ef;
+  font-size: 30px;
+  color: #DF9718;
 }
 
-.info {
-  background-color: #DCDF01;
+.accomodation {
   font-family: BadScript;
-  font-size: 24px;
-  color: #036FCE;
+  font-size: 30px;
+  color: #0056b3;
 }
 
-.line-up {
-  background-color: #00a651;
+.info-title {
   font-family: BadScript;
-  font-size: 24px;
-  color: #DCDF01;
+  font-size: 30px;
+  color: #5C8147;
 }
 
-.join-us {
-  background-color: #036FCE;
+.info-body {
   font-family: BadScript;
-  font-size: 26px;
-  color: #f2f0ef;
+  font-size: 22px;
+}
+
+.when {
+  font-family: BadScript;
+  font-size: 30px;
+  color: #156863;
+}
+
+.rsvp {
+  font-family: BadScript;
+  font-size: 30px;
+  color: #DF9718;
+}
+
+.flapping {
+  background-image: url("/images/Justflapping.gif");
+  background-size: cover;
+  height: 300px;
+  width: 300px;
+}
+
+.falling {
+  background-image: url("/images/Justfalling.gif");
+  background-size: cover;
+  height: 300px;
+  width: 300px;
+}
+
+.sticky-flapping {
+  position: sticky;
+  top: 100px;
 }
