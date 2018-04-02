@@ -24,6 +24,6 @@ class WeddingResponsesController < ApplicationController
 
   def wedding_response_params
     params.require(:wedding_response)
-          .permit(:names, :coming, :dietry_requirements, :accomodation, :friday_night, :breakfast)
+          .permit(:names, :address, :coming, :dietry_requirements, :accomodation, :friday_night, :breakfast)
   end
 end

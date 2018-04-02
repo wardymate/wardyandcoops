@@ -32,6 +32,13 @@
         <!-- start of hidden inputs -->
         <div class="staying-details">
           <div class="form-group row mb-4">
+            <%= f.label :adress, class: "col-sm-4 col-form-label" %>
+            <div class="col-sm-8">
+              <%= f.text_field :address, class: "form-control form-control-lg" %>
+            </div>
+          </div>
+
+          <div class="form-group row mb-4">
             <%= f.label :dietry_requirements, class: "col-sm-4 col-form-label" %>
             <div class="col-sm-8">
               <%= f.text_field :dietry_requirements, class: "form-control form-control-lg" %>
