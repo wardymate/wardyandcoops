@@ -9,10 +9,16 @@
 
 .camping {
   list-style: inside circle;
+  padding-left: inherit;
 }
 
 .hotels {
   list-style: none;
+  padding-left: inherit;
+  font-size: 16px;
+  @media (min-width: 768px) {
+    font-size: 22px;
+  }
 }
 
 #map {
@@ -47,6 +53,10 @@
   color: #0056b3;
 }
 
+#info {
+  position: reltive;
+}
+
 .info-title {
   font-family: BadScript;
   font-size: 30px;
@@ -70,21 +80,16 @@
   color: #DF9718;
 }
 
-.flapping {
-  background-image: url("/images/Justflapping.gif");
-  background-size: cover;
-  height: 300px;
-  width: 300px;
-}
-
-.falling {
-  background-image: url("/images/Justfalling.gif");
-  background-size: cover;
-  height: 300px;
-  width: 300px;
-}
-
-.sticky-flapping {
+#animate {
+  width: 100%;
   position: sticky;
-  top: 100px;
+  top: 200px;
+  @media (min-width: 768px) {
+    height: 200px;
+    width: 200px;
+  }
+  @media (min-width: 1024x) {
+    height: 300px;
+    width: 300px;
+  }
 }

@@ -5,7 +5,6 @@
     <title><%= content_for?(:title) ? yield(:title) : "Wardyandcoops" %></title>
     <meta name="description" content="<%= content_for?(:description) ? yield(:description) : "Wardyandcoops" %>">
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track' => 'reload' %>
     <%= csrf_meta_tags %>
     <link rel="apple-touch-icon" sizes="57x57" href="/apple-touch-icon-57x57.png">
     <link rel="apple-touch-icon" sizes="60x60" href="/apple-touch-icon-60x60.png">
@@ -30,5 +29,6 @@
       <%= render 'layouts/messages' %>
       <%= yield %>
     </main>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track' => 'reload' %>
   </body>
 </html>

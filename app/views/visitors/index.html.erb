@@ -2,10 +2,10 @@
 
 <div class="container">
   <div class="row">
-    <div class="mt-4">
+    <div class="col-sm-12 mt-4">
       </br>
       </br>
-      <img class="mt-4"src="/images/wardy-and-coops-ban-WC.gif">
+      <img class="mt-4"src="/images/wardy-and-coops-ban-WC.gif"/>
       <h1 class="mt-4 text-center">are getting married!</h1>
       <br>
       <h2 class="mt-4 text-center">We are delighted to invite you to be part of our Ceremony and Celebrations on<h2>
@@ -21,7 +21,10 @@
 
   <div class="row">
     <div class="col-4">
-      <div id="animate" class="flapping"></div>
+      <div id="animate">
+        <img class="flapping" src="/images/Justflapping.gif"/>
+        <img class="falling" src="/images/Justfalling.gif"/>
+      </div>
     </div>
 
     <div class="col-8">
@@ -31,9 +34,11 @@
       <section id="accomodation" class="section-wrapper">
         <%= render 'components/accomodation' %>
       </section>
-      <section id="rsvp" class="section-wrapper">
-        <a class="nav-link m-auto rsvp" href="/wedding_responses/new">RSVP</a>
-      </section>
     </div>
+  </div>
+  <div class="row mt-4">
+    <section id="rsvp" class="section-wrapper m-auto">
+      <a class="nav-link m-auto rsvp" href="/wedding_responses/new">RSVP</a>
+    </section>
   </div>
 </div>

@@ -1,5 +1,7 @@
 // import the CSS framework
 // Do not use *= require in Sass or your other stylesheets will not be able to access the Bootstrap mixins and variables.
+@import "bootstrap/functions";
+@import "bootstrap/variables";
 @import "bootstrap";
 
 // make all images responsive by default
@@ -35,7 +37,6 @@ img {
 // apply styles to HTML elements
 // to make views framework-neutral
 main {
-  @extend .container;
   margin-top: 30px; // accommodate the navbar
 }
 

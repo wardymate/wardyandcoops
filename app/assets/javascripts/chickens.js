@@ -4,16 +4,14 @@
   $(window).scroll(function() {
     var topOfInfo = $('#info').offset().top;
     var upFromBottom = 100;
-    if ($(document).scrollTop() > topOfInfo) {
-      $('#animate').addClass('sticky-flapping');
-    }
+
     if ($(window).scrollTop() + $(window).height() + upFromBottom > $(document).height()) {
-      $('#animate').removeClass('flapping');
-      $('#animate').addClass('falling');
+      $('.flapping').hide();
+      $('.falling').show();
     }
     if ($(window).scrollTop() + $(window).height() + upFromBottom < $(document).height()) {
-      $('#animate').addClass('flapping');
-      $('#animate').removeClass('falling');
+      $('.flapping').show();
+      $('.falling').hide();
     }
   })
 })(jQuery, document)
