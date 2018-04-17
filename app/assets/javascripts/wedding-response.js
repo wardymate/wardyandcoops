@@ -2,7 +2,7 @@
   'use strict'
 
   function initialize () {
-    if(!$("#wedding_response_names").val().length) {
+    if($("#wedding_response_names").length && !$("#wedding_response_names").val().length) {
       $('.coming').hide();
     }
     if(!$('#wedding_response_coming_yes').is(':checked')) {
