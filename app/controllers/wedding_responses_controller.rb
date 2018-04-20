@@ -20,6 +20,10 @@ class WeddingResponsesController < ApplicationController
     end
   end
 
+  def show
+    @wedding_response = WeddingResponse.find(params[:id])
+  end
+
   private
 
   def wedding_response_params

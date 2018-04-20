@@ -7,16 +7,16 @@
   </p>
   <br>
 
-  <% if @wedding_response.dietry_requirements %>
+  <% unless @wedding_response.dietry_requirements.empty? %>
     <p>Thank you for letting us know about the following dietary requirements. We will make sure you do not go hungry!</p>
     <p><%= @wedding_response.dietry_requirements %></p>
+    <br>
   <% end %>
 
-  <br>
   <% if @wedding_response.friday_night %>
-    <p> We are looking forward to seeing you for few QUIET drinks on the Friday night. We will have the grills hot from 7pm so bring something to throw on the grill and something to wash it down with.</p>
+    <p> We are looking forward to seeing you for a few QUIET drinks on the Friday night. We will have the grills hot from 7pm so bring something to throw on the grill and something to wash it down with.</p>
+    <br>
   <% end %>
-  <br>
 
   <% if @wedding_response.camping? %>
     <p>Remember to pack your tent - we may even help you with trying to pitch it.</p>
