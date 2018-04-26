@@ -87,7 +87,9 @@
 }
 
 .rsvp-large {
-  font-size: 70px;
+  @media (min-width: 768px) {
+    font-size: 70px;
+  }
 }
 
 #animate {
