@@ -15,7 +15,7 @@
     <% @wedding_responses.each do |wedding_response| %>
       <tr>
         <th scope="row"><%= wedding_response.names %></th>
-        <td><%= human_boolean wedding_response.coming %></td>
+        <td><%= wedding_response.coming %></td>
         <% if wedding_response.coming %>
           <td><%= wedding_response.address %></td>
           <td><%= wedding_response.dietry_requirements %></td>
